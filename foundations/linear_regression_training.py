@@ -25,7 +25,6 @@ class Solution:
         # For each iteration:
         #   1. Compute predictions with get_model_prediction(X, weights)
                 for j in range(len(weights)):
-                    print(weights[j])
                     gradient = self.get_derivative(preds, Y, len(X), X, j)
 
         #   2. For each weight index j, compute gradient with get_derivative()
