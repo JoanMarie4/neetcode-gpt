@@ -35,10 +35,10 @@ class Solution:
         for module in model.children():
             if isinstance(module, nn.Linear):
                 grad = module.weight.grad
-                mean_val = round(grad.mean().item(), 4)
-                std_val = round(grad.std().item(), 4)
-                norm_val = round(torch.norm(grad).item(), 4)
-                stats.append({'mean': mean_val, 'std': std_val, 'norm': norm_val})
+                mean = round(grad.mean().item(), 4)
+                std = round(grad.std().item(), 4)
+                norm = round(torch.norm(grad).item(), 4)
+                stats.append({'mean': mean, 'std': std, 'norm': norm})
         return stats
 
     def diagnose(self, activation_stats: List[Dict[str, float]], gradient_stats: List[Dict[str, float]]) -> str:
