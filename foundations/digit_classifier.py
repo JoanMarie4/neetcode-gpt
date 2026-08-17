@@ -17,8 +17,7 @@ class Solution(nn.Module):
         torch.manual_seed(0)
         # images shape: (batch_size, 784)
         # Return the model's prediction to 4 decimal places
-        x = self.linear1(images)
-        x = self.relu(x)
+        x = self.relu(self.linear1(images))
         x = self.dropout(x)
         x = self.linear2(x)
         x = self.sigmoid(x)
