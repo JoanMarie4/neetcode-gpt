@@ -9,4 +9,3 @@ class Solution:
         # Return the embedding vectors for the given token IDs
         # return np.round(your_answer, 5)
         return np.round(embeddings[token_ids], 5)
-        pass
