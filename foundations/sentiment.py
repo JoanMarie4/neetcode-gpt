@@ -20,3 +20,4 @@ class Solution(nn.Module):
         avg_tensor = torch.mean(embeddings, dim=1)
         output = self.linear(avg_tensor)
         return torch.round(self.sigmoid(output), decimals=4)
+        pass
